@@ -30,8 +30,8 @@
 	<groupId>net.runelite</groupId>
 	<artifactId>launcher</artifactId>
 	<version>1.0</version>
-	<name>Arcyte Launcher</name>
-	<description>Launcher for Arcyte client</description>
+	<name>Catalyst Launcher</name>
+	<description>Launcher for Catalyst client</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -152,7 +152,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Arcyte</finalName>
+		<finalName>Catalyst</finalName>
 
 
 		<plugins>

@@ -1,10 +1,10 @@
 [Setup]
-AppName=Arcyte Launcher
-AppPublisher=Arcyte
-UninstallDisplayName=Arcyte
+AppName=Catalyst Launcher
+AppPublisher=Catalyst
+UninstallDisplayName=Catalyst
 AppVersion=${project.version}
-AppSupportURL=https://arcyte.net/
-DefaultDirName={localappdata}\Arcyte
+AppSupportURL=https://catalyst.net/
+DefaultDirName={localappdata}\Catalyst
 
 ; ~30 mb for the repo the launcher downloads
 ExtraDiskSpaceRequired=30000000
@@ -14,7 +14,7 @@ PrivilegesRequired=lowest
 WizardSmallImageFile=${basedir}/innosetup/app_small.bmp
 WizardImageFile=${basedir}/innosetup/left.bmp
 SetupIconFile=${basedir}/innosetup/app.ico
-UninstallDisplayIcon={app}\Arcyte.exe
+UninstallDisplayIcon={app}\Catalyst.exe
 
 Compression=lzma2
 SolidCompression=yes
@@ -26,31 +26,31 @@ OutputBaseFilename=OpenRuneSetupAArch64
 Name: DesktopIcon; Description: "Create a &desktop icon";
 
 [Files]
-Source: "${basedir}\build\win-aarch64\Arcyte.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "${basedir}\build\win-aarch64\Arcyte.jar"; DestDir: "{app}"
+Source: "${basedir}\build\win-aarch64\Catalyst.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "${basedir}\build\win-aarch64\Catalyst.jar"; DestDir: "{app}"
 Source: "${basedir}\build\win-aarch64\launcher_aarch64.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "${basedir}\build\win-aarch64\config.json"; DestDir: "{app}"
 Source: "${basedir}\build\win-aarch64\jre\*"; DestDir: "{app}\jre"; Flags: recursesubdirs
 
 [Icons]
 ; start menu
-Name: "{userprograms}\Arcyte\Arcyte"; Filename: "{app}\Arcyte.exe"
-Name: "{userprograms}\Arcyte\Arcyte (configure)"; Filename: "{app}\Arcyte.exe"; Parameters: "--configure"
-Name: "{userprograms}\Arcyte\Arcyte (safe mode)"; Filename: "{app}\Arcyte.exe"; Parameters: "--safe-mode"
-Name: "{userdesktop}\Arcyte"; Filename: "{app}\Arcyte.exe"; Tasks: DesktopIcon
+Name: "{userprograms}\Catalyst\Catalyst"; Filename: "{app}\Catalyst.exe"
+Name: "{userprograms}\Catalyst\Catalyst (configure)"; Filename: "{app}\Catalyst.exe"; Parameters: "--configure"
+Name: "{userprograms}\Catalyst\Catalyst (safe mode)"; Filename: "{app}\Catalyst.exe"; Parameters: "--safe-mode"
+Name: "{userdesktop}\Catalyst"; Filename: "{app}\Catalyst.exe"; Tasks: DesktopIcon
 
 [Run]
-Filename: "{app}\Arcyte.exe"; Parameters: "--postinstall"; Flags: nowait
-Filename: "{app}\Arcyte.exe"; Description: "&Open Arcyte"; Flags: postinstall skipifsilent nowait
+Filename: "{app}\Catalyst.exe"; Parameters: "--postinstall"; Flags: nowait
+Filename: "{app}\Catalyst.exe"; Description: "&Open Catalyst"; Flags: postinstall skipifsilent nowait
 
 [InstallDelete]
 ; Delete the old jvm so it doesn't try to load old stuff with the new vm and crash
 Type: filesandordirs; Name: "{app}\jre"
 ; previous shortcut
-Type: files; Name: "{userprograms}\Arcyte.lnk"
+Type: files; Name: "{userprograms}\Catalyst.lnk"
 
 [UninstallDelete]
-Type: filesandordirs; Name: "{%USERPROFILE}\.Arcyte\repository2"
+Type: filesandordirs; Name: "{%USERPROFILE}\.Catalyst\repository2"
 ; includes install_id, settings, etc
 Type: filesandordirs; Name: "{app}"
 
