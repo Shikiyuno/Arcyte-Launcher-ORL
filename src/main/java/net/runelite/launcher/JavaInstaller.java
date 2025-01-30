@@ -13,7 +13,7 @@ import static net.runelite.launcher.Launcher.stage;
 
 public class JavaInstaller {
 
-    private static final File SAVE_LOC = new File(System.getenv("APPDATA") + "/" + LauncherProperties.getApplicationName() + "/");
+    private static final File SAVE_LOC = Launcher.RUNELITE_DIR;
 
     private static final File LOCAL_HASH_FILE = new File(SAVE_LOC,"java_hash.txt");
 

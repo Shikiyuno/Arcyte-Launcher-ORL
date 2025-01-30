@@ -11,9 +11,9 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "FileDescription",  "Arcyte"
-            VALUE "OriginalFilename", "Arcyte.exe"
-            VALUE "ProductName",      "Arcyte Launcher"
+            VALUE "FileDescription",  "Catalyst"
+            VALUE "OriginalFilename", "Catalyst.exe"
+            VALUE "ProductName",      "Catalyst Launcher"
         END
     END
 
