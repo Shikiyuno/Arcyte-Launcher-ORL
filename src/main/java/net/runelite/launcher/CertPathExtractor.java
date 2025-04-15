@@ -27,7 +27,7 @@ package net.runelite.launcher;
 public class CertPathExtractor
 {
     static String extract(Throwable ex)
-    {
+    { //blah
         // see the corresponding version in java8/
         return null;
     }
